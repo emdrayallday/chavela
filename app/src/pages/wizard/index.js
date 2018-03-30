@@ -60,7 +60,7 @@ const Wizard = props => {
       <Container>
         <QuestionCard
           data={props.steps.finished}
-          hi={props.form}
+          formData={props.form}
           prev={() => props.prev(props.stepNumber)}
         />
       </Container>

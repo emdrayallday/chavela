@@ -103,7 +103,7 @@ const initialState = {
       'For the best results, it is always important to add cardiovascular activity and weight training together. However if you do not have access to a gym you can still lose weight.'
   },
   finished: {
-    desc: 'YOU DID IT',
+    desc: 'Confirm Results',
     img: '/success.jpg'
   }
 }

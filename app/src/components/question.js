@@ -89,30 +89,7 @@ const QuestionCard = props => {
           <Button basic color="red" onClick={props.prev}>
             Previous
           </Button>
-          <Button basic color="green" floated="right" onClick={props.next}>
-            Proceed
-          </Button>
-        </Card.Content>
-      </Card>
-    )
-  } else {
-    return (
-      <Card raised color="purple" centered>
-        <Image src={img} />
-        <Card.Content textAlign="center">
-          <Card.Header>{question}</Card.Header>
-        </Card.Content>
-
-        <Card.Meta />
-
-        <Card.Content>
-          <Card.Description>Confirm results and submit</Card.Description>
-        </Card.Content>
-        <Card.Content extra>
-          <Button basic color="red" onClick={props.prev}>
-            Previous
-          </Button>
-          <Button basic color="green" floated="right" onClick={props.next}>
+          <Button basic color="green" floated="right" onClick={props.submit}>
             Submit
           </Button>
         </Card.Content>
