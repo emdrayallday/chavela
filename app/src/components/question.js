@@ -133,7 +133,12 @@ const QuestionCard = props => {
           <Button basic color="red" onClick={props.prev}>
             Previous
           </Button>
-          <Button basic color="green" floated="right" onClick={props.submit}>
+          <Button
+            basic
+            color="green"
+            floated="right"
+            onClick={props.submit(props.history, props.formData)}
+          >
             Submit
           </Button>
         </Card.Content>

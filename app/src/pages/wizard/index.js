@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Segment } from 'semantic-ui-react'
 import QuestionCard from '../../components/question'
 import { connect } from 'react-redux'
+import { addGoal } from '../../action-creators/program'
 import { NEXT_STEP, PREV_STEP, CURRENT_NAME } from '../../constants'
 const Wizard = props => {
   console.log('WHICH STEP', props.stepNumber)
@@ -55,6 +56,8 @@ const Wizard = props => {
           prev={() => props.prev(props.stepNumber)}
           value={props.form.activities}
           onChange={(e, { value }) => props.onChange('activities', value)}
+          submit={props.onSubmit}
+          history={props.history}
         />
       </Container>
     )
@@ -89,7 +92,8 @@ function mapActionToProps(dispatch) {
       dispatch({ type: PREV_STEP, payload: stepNumber })
     },
     onChange: (field, value) =>
-      dispatch({ type: CURRENT_NAME, payload: { [field]: value } })
+      dispatch({ type: CURRENT_NAME, payload: { [field]: value } }),
+    onSubmit: (history, goal) => addGoal(history, goal)
   }
 }
 

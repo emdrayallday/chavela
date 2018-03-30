@@ -1,14 +1,32 @@
 import React from 'react'
 import MenuBar from '../../components/menu'
+import { connect } from 'react-redux'
+import { Grid, Image } from 'semantic-ui-react'
+import { map, slice } from 'ramda'
 const Resources = props => {
   return (
     <div>
       <MenuBar active="resources" />
-      <h1>RESOURCES</h1> You have taken the first step in becoming healthy! Now
-      it is time for us to do our part. To start the challenge click the button
-      below! Remember to stay motivated. Never Give Up, Never Surrender!
+      <Grid>
+        <Grid.Row columns={2}>
+          {map(
+            r => (
+              <Grid.Column>
+                <Image src={r.img} />
+              </Grid.Column>
+            ),
+            slice(0, 2, props.resources)
+          )}
+        </Grid.Row>
+      </Grid>
     </div>
   )
 }
 
-export default Resources
+function mapStateToProps(state) {
+  return {
+    resources: state.resources
+  }
+}
+const connector = connect(mapStateToProps)
+export default connector(Resources)

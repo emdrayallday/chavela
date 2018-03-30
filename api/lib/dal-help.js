@@ -9,7 +9,9 @@ const allDocs = options => {
   return db.allDocs(options).then(result => pluck('doc', result.rows))
 }
 const getDoc = id => db.get(id)
+const addDoc = doc => db.put(doc)
 module.exports = {
   allDocs,
-  getDoc
+  getDoc,
+  addDoc
 }
