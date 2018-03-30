@@ -1,0 +1,31 @@
+{
+  "name": "my-fat-friend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "material-ui": "^0.20.0",
+    "material-ui-icons": "^1.0.0-beta.36",
+    "ramda": "^0.25.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-responsive-carousel": "^3.1.33",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.1",
+    "react-slick": "^0.22.3",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "semantic-ui-css": "^2.3.1",
+    "semantic-ui-react": "^0.79.0",
+    "slick-carousel": "^1.8.1",
+    "slugify": "^1.2.9",
+    "typeface-roboto": "^0.0.54"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
