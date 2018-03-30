@@ -11,6 +11,7 @@ const Wizard = props => {
     return (
       <Container>
         <QuestionCard
+          formData={props.form}
           data={props.steps.started}
           cancel={() => props.cancel(props.history)}
           next={() => props.next(props.stepNumber)}
@@ -35,6 +36,7 @@ const Wizard = props => {
     return (
       <Container>
         <QuestionCard
+          formData={props.form}
           data={props.steps.two}
           next={() => props.next(props.stepNumber)}
           prev={() => props.prev(props.stepNumber)}
@@ -47,6 +49,7 @@ const Wizard = props => {
     return (
       <Container>
         <QuestionCard
+          formData={props.form}
           data={props.steps.three}
           next={() => props.next(props.stepNumber)}
           prev={() => props.prev(props.stepNumber)}

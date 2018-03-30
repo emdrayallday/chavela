@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card, Input, Image, Icon, Button, Dropdown } from 'semantic-ui-react'
-import { isNil } from 'ramda'
+import { map } from 'ramda'
 const QuestionCard = props => {
   const { statement, question, img, desc, buttons, step } = props.data
 
@@ -32,7 +32,7 @@ const QuestionCard = props => {
         </Card.Content>
       </Card>
     )
-  } else if (step === 1 || step === 2) {
+  } else if (step === 1) {
     return (
       <Card raised color="purple" centered>
         <Image src={img} size="small" centered />
@@ -43,8 +43,8 @@ const QuestionCard = props => {
           <Dropdown
             options={buttons.options}
             placeholder="Choose an option"
-            selection
             fluid
+            selection
             value={props.value}
             onChange={props.onChange}
           />
@@ -58,6 +58,50 @@ const QuestionCard = props => {
             Previous
           </Button>
           <Button basic color="green" floated="right" onClick={props.next}>
+            Proceed
+          </Button>
+        </Card.Content>
+      </Card>
+    )
+  } else if (step === 2) {
+    return (
+      <Card raised color="purple" centered>
+        <Image src={img} size="small" centered />
+        <Card.Content textAlign="center">
+          <Card.Header>{question}</Card.Header>
+        </Card.Content>
+        <Card.Meta>
+          <Dropdown
+            options={buttons.options}
+            placeholder="Choose an option"
+            fluid
+            selection
+            value={props.value}
+            onChange={props.onChange}
+            error={
+              (props.formData.goal === 30 && props.value < 12) ||
+              (props.formData.goal === 20 && props.value < 6)
+            }
+          />
+        </Card.Meta>
+
+        <Card.Content>
+          <Card.Description>{desc}</Card.Description>
+        </Card.Content>
+        <Card.Content extra>
+          <Button basic color="red" onClick={props.prev}>
+            Previous
+          </Button>
+          <Button
+            basic
+            color="green"
+            floated="right"
+            onClick={props.next}
+            disabled={
+              (props.formData.goal === 30 && props.value < 12) ||
+              (props.formData.goal === 20 && props.value < 6)
+            }
+          >
             Proceed
           </Button>
         </Card.Content>
