@@ -106,10 +106,6 @@ db
         img: '/muscles.jpg',
         desc:
           'For the best results, it is always important to add cardiovascular activity and weight training together. However if you do not have access to a gym you can still lose weight.'
-      },
-      finished: {
-        desc: 'YOU DID IT',
-        img: '/success.jpg'
       }
     },
 
@@ -163,22 +159,23 @@ db
       url: 'https://www.youtube.com/watch?v=KYaP3yCyHRY&t=522s',
       tags: ['gym', 'weight loss', 'strength', 'weights', 'row']
     },
-    {
-      _id: 'task_run',
-      type: 'task',
-      frequency: 'daily',
-      completed: false,
-      name: 'Run',
-      setRep: '1 Mile',
-      tags: ['weight loss', 'run', 'cardio', 'endurance']
-    },
+
     {
       _id: 'task_walk',
       type: 'task',
       frequency: 'daily',
       name: 'Walk',
       completed: false,
-      setRep: '30 - 60 Minutes',
+      setRep: '30 minutes',
+      tags: ['weight loss', 'walk', 'cardio', 'endurance']
+    },
+    {
+      _id: 'task_walk-one-hour',
+      type: 'task',
+      frequency: 'daily',
+      name: 'Walk One Hour',
+      completed: false,
+      setRep: '60 minutes',
       tags: ['weight loss', 'walk', 'cardio', 'endurance']
     },
     {
@@ -189,6 +186,42 @@ db
       completed: false,
       url: 'https://www.youtube.com/watch?v=C9nw2JY30JI',
       setRep: '6-12 Rounds of 30 - 60 Meter Pushes',
+      tags: ['weight loss', 'run', 'cardio', 'endurance']
+    },
+    {
+      _id: 'task_run',
+      type: 'task',
+      frequency: 'daily',
+      completed: false,
+      name: 'Run',
+      setRep: '1 Mile',
+      tags: ['weight loss', 'run', 'cardio', 'endurance']
+    },
+    {
+      _id: 'task_run-two',
+      type: 'task',
+      frequency: 'daily',
+      name: 'Run 2 miles',
+      completed: false,
+      setRep: '2 miles',
+      tags: ['weight loss', 'run', 'cardio', 'endurance']
+    },
+    {
+      _id: 'task_run-three',
+      type: 'task',
+      frequency: 'daily',
+      name: 'Run 3 miles',
+      completed: false,
+      setRep: '3 miles',
+      tags: ['weight loss', 'run', 'cardio', 'endurance']
+    },
+    {
+      _id: 'task_run-unlimited',
+      type: 'task',
+      frequency: 'daily',
+      name: 'Run as long as possible',
+      completed: false,
+      setRep: 'unlimited',
       tags: ['weight loss', 'run', 'cardio', 'endurance']
     },
     {
