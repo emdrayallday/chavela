@@ -116,7 +116,7 @@ const QuestionCard = props => {
         </Card.Content>
         <Card.Meta>
           <Dropdown
-            placeholder="Do it"
+            placeholder="Select One or More"
             fluid
             multiple
             selection

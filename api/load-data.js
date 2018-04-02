@@ -186,7 +186,7 @@ db
       completed: false,
       url: 'https://www.youtube.com/watch?v=C9nw2JY30JI',
       setRep: '6-12 Rounds of 30 - 60 Meter Pushes',
-      tags: ['weight loss', 'run', 'cardio', 'endurance']
+      tags: ['weight loss', 'cardio', 'gym', 'endurance']
     },
     {
       _id: 'task_run',

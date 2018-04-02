@@ -13,7 +13,7 @@ import { map, slice } from 'ramda'
 const Resources = props => {
   return (
     <div>
-      <MenuBar active="resources" />
+      <MenuBar active="resources" history={props.history} />
       <Grid columns={2} celled>
         <Grid.Row centered columns={1}>
           {map(

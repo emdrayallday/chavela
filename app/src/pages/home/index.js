@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const Home = props => {
   return (
     <div>
-      <MenuBar active="home" />
+      <MenuBar active="home" history={props.history} />
       <Container text textAlign="center">
         <Header
           as="h1"

@@ -8,17 +8,31 @@ const MenuBar = props => {
     <Segment inverted textAlign="center" vertical>
       <Container>
         <Menu inverted secondary pointing>
-          <Link to="/">
-            <Menu.Item active={isActive === 'home'}>Home</Menu.Item>
-          </Link>
-          <Link to="/resources">
-            <Menu.Item active={isActive === 'resources'}>Resources</Menu.Item>
-          </Link>
-          <Link to="/success-stories">
-            <Menu.Item active={isActive === 'success'}>
-              Success Stories
-            </Menu.Item>
-          </Link>
+          <Menu.Item
+            active={isActive === 'home'}
+            onClick={() => props.history.push('/')}
+          >
+            Home
+          </Menu.Item>
+          <Menu.Item
+            active={isActive === 'program'}
+            onClick={() => props.history.push('/program')}
+          >
+            Program
+          </Menu.Item>
+          <Menu.Item
+            active={isActive === 'resources'}
+            onClick={() => props.history.push('/resources')}
+          >
+            Resources
+          </Menu.Item>
+
+          <Menu.Item
+            active={isActive === 'success'}
+            onClick={() => props.history.push('/success-stories')}
+          >
+            Success Stories
+          </Menu.Item>
         </Menu>
       </Container>
     </Segment>

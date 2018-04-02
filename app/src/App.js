@@ -5,6 +5,7 @@ import Home from './pages/home'
 import Resources from './pages/resources'
 import Success from './pages/success'
 import Wizard from './pages/wizard'
+import Program from './pages/program'
 class App extends Component {
   render() {
     return (
@@ -15,6 +16,7 @@ class App extends Component {
             <Route exact path="/resources" component={Resources} />
             <Route exact path="/success-stories" component={Success} />
             <Route exact path="/wizard" component={Wizard} />
+            <Route exact path="/program" component={Program} />
           </Switch>
         </div>
       </BrowserRouter>

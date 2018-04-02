@@ -87,13 +87,7 @@ const initialState = {
         },
         {
           text: 'Active Hobbies',
-          value: [
-            'Basketball',
-            'Skateboarding',
-            'Swimming',
-            'Ultimate Frisbee',
-            'Cycling'
-          ],
+          value: 'active',
           selected: false
         }
       ]
