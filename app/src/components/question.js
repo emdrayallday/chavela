@@ -18,6 +18,7 @@ const QuestionCard = props => {
           placeholder="Enter Name"
           value={props.value}
           onChange={props.onChange}
+          error={props.value === '' || props.value === undefined}
         />
         <Card.Content>
           <Card.Description>{desc}</Card.Description>
@@ -26,7 +27,13 @@ const QuestionCard = props => {
           <Button basic color="red" onClick={props.cancel}>
             Cancel
           </Button>
-          <Button basic color="green" floated="right" onClick={props.next}>
+          <Button
+            basic
+            color="green"
+            floated="right"
+            onClick={props.next}
+            disabled={props.value === '' || props.value === undefined}
+          >
             Proceed
           </Button>
         </Card.Content>
