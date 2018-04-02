@@ -1,14 +1,11 @@
 import React from 'react'
 import { map, filter } from 'ramda'
-import { List, Checkbox, Container } from 'semantic-ui-react'
+import { List, Checkbox, Segment, Grid, Header } from 'semantic-ui-react'
 const Gym = props => {
   const workoutA = map(t => {
     return (
       <List>
         <List.Item>
-          <List.Content floated="left">
-            <Checkbox key={t.name} />{' '}
-          </List.Content>
           <List.Content>
             <List.Header as="a" href={t.url} target="_blank">
               {t.name}
@@ -24,9 +21,6 @@ const Gym = props => {
     return (
       <List divided relaxed>
         <List.Item>
-          <List.Content floated="left">
-            <Checkbox key={t.name} />{' '}
-          </List.Content>
           <List.Content>
             <List.Header as="a" href={t.url} target="_blank">
               {t.name}
@@ -39,12 +33,21 @@ const Gym = props => {
   }, filter(t => t.name === 'Squat' || t.name === 'Deadlift' || t.name === 'Overhead Press', props.data))
   return (
     <div>
-      <Container>
-        Workout 3 times a week on MWF, Alternate workouts A and B. <br />A{
-          workoutA
-        }
-        B{workoutB}{' '}
-      </Container>
+      <Segment textAlign="center">
+        <Header as="h5">Alternate workouts A and B three times a week</Header>
+        <Grid textAlign="center">
+          <Grid.Row>
+            <Grid.Column width={8}>
+              <Header as="h5">A</Header>
+              {workoutA}
+            </Grid.Column>
+            <Grid.Column width={8}>
+              <Header as="h5">B</Header>
+              {workoutB}
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Segment>
     </div>
   )
 }
