@@ -23,7 +23,10 @@ const Walk = props => {
   }, props.data)
   return (
     <div>
-      <Segment>
+      <Segment
+        style={props.style ? { backgroundColor: 'Gainsboro' } : null}
+        basic
+      >
         <Grid textAlign="center" verticalAlign="middle">
           <Grid.Row>
             <Grid.Column width={8}>

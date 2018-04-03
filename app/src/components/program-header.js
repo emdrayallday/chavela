@@ -6,7 +6,7 @@ const ModifyBar = props => {
   return (
     <div>
       <MenuBar active="program" history={props.history} />
-      <Segment>
+      <Segment basic>
         <Container textAlign="center">
           <Header as="h2" icon>
             <Icon name="settings" />

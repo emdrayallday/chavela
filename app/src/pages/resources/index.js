@@ -2,7 +2,8 @@ import React from 'react'
 import MenuBar from '../../components/menu'
 import { connect } from 'react-redux'
 import {
-  Grid,
+  Card,
+  Button,
   Image,
   Reveal,
   Container,
@@ -14,52 +15,30 @@ const Resources = props => {
   return (
     <div>
       <MenuBar active="resources" history={props.history} />
-      <Grid columns={2} celled>
-        <Grid.Row centered columns={1}>
+      <Segment attached style={{ backgroundColor: 'Gainsboro' }}>
+        <Card.Group>
           {map(
             r => (
-              <Grid.Column>
-                {' '}
-                <Image src={r.img} size="medium" floated="left" />
-                <Header as="h2">{r.name}</Header>
-                <p>{r.desc}</p>
-              </Grid.Column>
+              <Card fluid color="violet">
+                <Card.Content>
+                  <Image floated="right" size="mini" src={r.img} />
+                  <Card.Header>{r.name}</Card.Header>
+                  <Card.Meta>{r.shortDesc}</Card.Meta>
+                  <Card.Description>{r.desc}</Card.Description>
+                </Card.Content>
+                <Card.Content extra>
+                  <div className="ui two buttons">
+                    <Button basic color="teal" href={r.url} target="_blank">
+                      Website
+                    </Button>
+                  </div>
+                </Card.Content>
+              </Card>
             ),
-            slice(2, 3, props.resources)
+            props.resources
           )}
-        </Grid.Row>
-
-        <Grid.Row centered columns={3} verticalAlign="middle">
-          {map(
-            r => (
-              <Grid.Column>
-                <Image src={r.img} size="medium" />
-              </Grid.Column>
-            ),
-            slice(3, 6, props.resources)
-          )}
-        </Grid.Row>
-        <Grid.Row centered columns={2} verticalAlign="middle">
-          {map(
-            r => (
-              <Grid.Column>
-                <Image src={r.img} size="medium" />
-              </Grid.Column>
-            ),
-            slice(0, 2, props.resources)
-          )}
-        </Grid.Row>
-        <Grid.Row centered columns={2} verticalAlign="middle">
-          {map(
-            r => (
-              <Grid.Column>
-                <Image src={r.img} size="medium" />
-              </Grid.Column>
-            ),
-            slice(6, 8, props.resources)
-          )}
-        </Grid.Row>
-      </Grid>
+        </Card.Group>
+      </Segment>
     </div>
   )
 }

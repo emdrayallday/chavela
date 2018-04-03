@@ -48,7 +48,10 @@ const Program = props => {
         <Grid>
           <Grid.Row>
             <Grid.Column>
-              <Walk data={filter(t => contains('walk', t.tags), props.tasks)} />
+              <Walk
+                data={filter(t => contains('walk', t.tags), props.tasks)}
+                style
+              />
             </Grid.Column>
           </Grid.Row>
         </Grid>
@@ -72,12 +75,18 @@ const Program = props => {
           {' '}
           <Grid.Row>
             <Grid.Column>
-              <Gym data={filter(t => contains('gym', t.tags), props.tasks)} />
+              <Gym
+                data={filter(t => contains('gym', t.tags), props.tasks)}
+                style
+              />
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
             <Grid.Column>
-              <Walk data={filter(t => contains('walk', t.tags), props.tasks)} />
+              <Walk
+                data={filter(t => contains('walk', t.tags), props.tasks)}
+                style={false}
+              />
             </Grid.Column>
           </Grid.Row>
         </Grid>
@@ -99,7 +108,10 @@ const Program = props => {
         <Grid>
           <Grid.Row>
             <Grid.Column>
-              <Gym data={filter(t => contains('gym', t.tags), props.tasks)} />
+              <Gym
+                data={filter(t => contains('gym', t.tags), props.tasks)}
+                style
+              />
             </Grid.Column>
           </Grid.Row>
         </Grid>
@@ -122,12 +134,18 @@ const Program = props => {
         <Grid>
           <Grid.Row>
             <Grid.Column>
-              <Walk data={filter(t => contains('walk', t.tags), props.tasks)} />
+              <Walk
+                data={filter(t => contains('walk', t.tags), props.tasks)}
+                style
+              />
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
             <Grid.Column>
-              <Run data={filter(t => contains('run', t.tags), props.tasks)} />
+              <Run
+                data={filter(t => contains('run', t.tags), props.tasks)}
+                style={false}
+              />
             </Grid.Column>
           </Grid.Row>
         </Grid>
@@ -151,18 +169,25 @@ const Program = props => {
         <Grid>
           <Grid.Row>
             <Grid.Column>
-              <Walk data={filter(t => contains('walk', t.tags), props.tasks)} />
+              <Walk
+                data={filter(t => contains('walk', t.tags), props.tasks)}
+                style
+              />
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
             <Grid.Column>
-              <Run data={filter(t => contains('run', t.tags), props.tasks)} />
+              <Run
+                data={filter(t => contains('run', t.tags), props.tasks)}
+                style={false}
+              />
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
             <Grid.Column>
               <Active
                 data={filter(t => contains('active', t.tags), props.tasks)}
+                style
               />
             </Grid.Column>
           </Grid.Row>
@@ -185,7 +210,10 @@ const Program = props => {
         <Grid>
           <Grid.Row>
             <Grid.Column>
-              <Run data={filter(t => contains('run', t.tags), props.tasks)} />
+              <Run
+                data={filter(t => contains('run', t.tags), props.tasks)}
+                style
+              />
             </Grid.Column>
           </Grid.Row>
         </Grid>
@@ -209,12 +237,18 @@ const Program = props => {
           {' '}
           <Grid.Row>
             <Grid.Column>
-              <Gym data={filter(t => contains('gym', t.tags), props.tasks)} />
+              <Gym
+                data={filter(t => contains('gym', t.tags), props.tasks)}
+                style
+              />
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
             <Grid.Column>
-              <Run data={filter(t => contains('run', t.tags), props.tasks)} />
+              <Run
+                data={filter(t => contains('run', t.tags), props.tasks)}
+                style={false}
+              />
             </Grid.Column>
           </Grid.Row>
         </Grid>
@@ -238,18 +272,27 @@ const Program = props => {
         <Grid>
           <Grid.Row>
             <Grid.Column>
-              <Gym data={filter(t => contains('gym', t.tags), props.tasks)} />
+              <Gym
+                data={filter(t => contains('gym', t.tags), props.tasks)}
+                style
+              />
             </Grid.Column>{' '}
           </Grid.Row>
           <Grid.Row>
             <Grid.Column>
-              <Run data={filter(t => contains('run', t.tags), props.tasks)} />
+              <Run
+                data={filter(t => contains('run', t.tags), props.tasks)}
+                style={false}
+              />
             </Grid.Column>
           </Grid.Row>
 
           <Grid.Row>
             <Grid.Column>
-              <Walk data={filter(t => contains('walk', t.tags), props.tasks)} />
+              <Walk
+                data={filter(t => contains('walk', t.tags), props.tasks)}
+                style
+              />
             </Grid.Column>
           </Grid.Row>
         </Grid>
@@ -274,23 +317,33 @@ const Program = props => {
         <Grid>
           <Grid.Row>
             <Grid.Column>
-              <Gym data={filter(t => contains('gym', t.tags), props.tasks)} />
+              <Gym
+                data={filter(t => contains('gym', t.tags), props.tasks)}
+                style
+              />
             </Grid.Column>{' '}
           </Grid.Row>{' '}
           <Grid.Row>
             <Grid.Column>
-              <Walk data={filter(t => contains('walk', t.tags), props.tasks)} />
+              <Walk
+                data={filter(t => contains('walk', t.tags), props.tasks)}
+                style={false}
+              />
             </Grid.Column>
           </Grid.Row>{' '}
           <Grid.Row>
             <Grid.Column>
-              <Run data={filter(t => contains('run', t.tags), props.tasks)} />
+              <Run
+                data={filter(t => contains('run', t.tags), props.tasks)}
+                style
+              />
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
             <Grid.Column>
               <Active
                 data={filter(t => contains('active', t.tags), props.tasks)}
+                style={false}
               />
             </Grid.Column>
           </Grid.Row>
@@ -315,6 +368,7 @@ const Program = props => {
             <Grid.Column>
               <Active
                 data={filter(t => contains('active', t.tags), props.tasks)}
+                style
               />
             </Grid.Column>
           </Grid.Row>
@@ -338,13 +392,17 @@ const Program = props => {
         <Grid>
           <Grid.Row>
             <Grid.Column>
-              <Walk data={filter(t => contains('walk', t.tags), props.tasks)} />
+              <Walk
+                data={filter(t => contains('walk', t.tags), props.tasks)}
+                style
+              />
             </Grid.Column>
           </Grid.Row>{' '}
           <Grid.Row>
             <Grid.Column>
               <Active
                 data={filter(t => contains('active', t.tags), props.tasks)}
+                style={false}
               />
             </Grid.Column>
           </Grid.Row>
@@ -368,13 +426,17 @@ const Program = props => {
         <Grid>
           <Grid.Row>
             <Grid.Column>
-              <Run data={filter(t => contains('run', t.tags), props.tasks)} />
+              <Run
+                data={filter(t => contains('run', t.tags), props.tasks)}
+                style
+              />
             </Grid.Column>
           </Grid.Row>{' '}
           <Grid.Row>
             <Grid.Column>
               <Active
                 data={filter(t => contains('active', t.tags), props.tasks)}
+                style={false}
               />
             </Grid.Column>
           </Grid.Row>
@@ -399,18 +461,25 @@ const Program = props => {
         <Grid>
           <Grid.Row>
             <Grid.Column>
-              <Gym data={filter(t => contains('gym', t.tags), props.tasks)} />
+              <Gym
+                data={filter(t => contains('gym', t.tags), props.tasks)}
+                style
+              />
             </Grid.Column>
           </Grid.Row>{' '}
           <Grid.Row>
             <Grid.Column>
-              <Run data={filter(t => contains('run', t.tags), props.tasks)} />
+              <Run
+                data={filter(t => contains('run', t.tags), props.tasks)}
+                style={false}
+              />
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
             <Grid.Column>
               <Active
                 data={filter(t => contains('active', t.tags), props.tasks)}
+                style
               />
             </Grid.Column>
           </Grid.Row>
@@ -436,18 +505,25 @@ const Program = props => {
           {' '}
           <Grid.Row>
             <Grid.Column>
-              <Walk data={filter(t => contains('walk', t.tags), props.tasks)} />
+              <Walk
+                data={filter(t => contains('walk', t.tags), props.tasks)}
+                style
+              />
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
             <Grid.Column>
-              <Gym data={filter(t => contains('gym', t.tags), props.tasks)} />
+              <Gym
+                data={filter(t => contains('gym', t.tags), props.tasks)}
+                style={false}
+              />
             </Grid.Column>
           </Grid.Row>{' '}
           <Grid.Row>
             <Grid.Column>
               <Active
                 data={filter(t => contains('active', t.tags), props.tasks)}
+                style
               />
             </Grid.Column>
           </Grid.Row>
@@ -471,13 +547,17 @@ const Program = props => {
         <Grid>
           <Grid.Row>
             <Grid.Column>
-              <Gym data={filter(t => contains('gym', t.tags), props.tasks)} />
+              <Gym
+                data={filter(t => contains('gym', t.tags), props.tasks)}
+                style
+              />
             </Grid.Column>
           </Grid.Row>{' '}
           <Grid.Row>
             <Grid.Column>
               <Active
                 data={filter(t => contains('active', t.tags), props.tasks)}
+                style={false}
               />
             </Grid.Column>
           </Grid.Row>

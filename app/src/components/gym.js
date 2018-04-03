@@ -33,7 +33,11 @@ const Gym = props => {
   }, filter(t => t.name === 'Squat' || t.name === 'Deadlift' || t.name === 'Overhead Press', props.data))
   return (
     <div>
-      <Segment textAlign="center">
+      <Segment
+        textAlign="center"
+        style={props.style ? { backgroundColor: 'Gainsboro' } : null}
+        basic
+      >
         <Header as="h5">Alternate workouts A and B three times a week</Header>
         <Grid textAlign="center">
           <Grid.Row>

@@ -5,9 +5,9 @@ import { Menu, Container, Segment } from 'semantic-ui-react'
 const MenuBar = props => {
   let isActive = props.active
   return (
-    <Segment inverted textAlign="center" vertical>
+    <Segment inverted textAlign="center" attached>
       <Container>
-        <Menu inverted secondary pointing>
+        <Menu inverted secondary pointing style={{ color: 'white' }}>
           <Menu.Item
             active={isActive === 'home'}
             onClick={() => props.history.push('/')}
@@ -31,7 +31,7 @@ const MenuBar = props => {
             active={isActive === 'success'}
             onClick={() => props.history.push('/success-stories')}
           >
-            Success Stories
+            Success
           </Menu.Item>
         </Menu>
       </Container>
