@@ -250,7 +250,7 @@ db
       name: 'Martial Arts',
       completed: false,
       setRep: 'Learn to defend yourself while getting in shape',
-      tags: ['weight loss', 'run', 'cardio', 'active', 'endurance']
+      tags: ['weight loss', 'cardio', 'active', 'endurance']
     },
     {
       _id: 'task_rollerblading',
@@ -259,7 +259,7 @@ db
       name: 'Rollerblading',
       completed: false,
       setRep: 'Just plain fun',
-      tags: ['weight loss', 'run', 'cardio', 'active', 'endurance']
+      tags: ['weight loss', 'cardio', 'active', 'endurance']
     },
     {
       _id: 'task_hiking',
@@ -268,7 +268,7 @@ db
       name: 'Hiking',
       completed: false,
       setRep: 'Get in touch wiht nature',
-      tags: ['weight loss', 'run', 'cardio', 'active', 'endurance']
+      tags: ['weight loss', 'cardio', 'active', 'endurance']
     },
     {
       _id: 'task_yoga',
@@ -277,7 +277,7 @@ db
       name: 'Yoga',
       completed: false,
       setRep: 'Surprisingly hard',
-      tags: ['weight loss', 'run', 'cardio', 'active', 'endurance']
+      tags: ['weight loss', 'cardio', 'active', 'endurance']
     },
     {
       _id: 'task_dancing',
@@ -286,7 +286,7 @@ db
       name: 'Dancing',
       completed: false,
       setRep: 'Everyone loves a good dancer',
-      tags: ['weight loss', 'run', 'cardio', 'active', 'endurance']
+      tags: ['weight loss', 'cardio', 'active', 'endurance']
     },
     {
       _id: 'task_riding-a-bike',
@@ -295,7 +295,7 @@ db
       name: 'Riding a bike',
       completed: false,
       setRep: 'Only if you ride in the middle of the road and block traffic',
-      tags: ['weight loss', 'run', 'cardio', 'active', 'endurance']
+      tags: ['weight loss', 'cardio', 'active', 'endurance']
     },
     {
       _id: 'task_ultimate-frisbee',
@@ -304,7 +304,7 @@ db
       name: 'Ultimate Frisbee',
       completed: false,
       setRep: 'If you like running and throwing things',
-      tags: ['weight loss', 'run', 'cardio', 'active', 'endurance']
+      tags: ['weight loss', 'cardio', 'active', 'endurance']
     },
     {
       _id: 'task_swimming',
@@ -313,7 +313,7 @@ db
       name: 'Swimming',
       completed: false,
       setRep: 'Only if you can',
-      tags: ['weight loss', 'run', 'cardio', 'active', 'endurance']
+      tags: ['weight loss', 'cardio', 'active', 'endurance']
     },
     {
       _id: 'task_basketball',
@@ -331,7 +331,7 @@ db
       name: 'Skateboarding',
       completed: false,
       setRep: 'Like uber fun',
-      tags: ['weight loss', 'run', 'cardio', 'active', 'endurance']
+      tags: ['weight loss', 'cardio', 'active', 'endurance']
     },
     {
       _id: 'resource_lift-big-eat-big',
