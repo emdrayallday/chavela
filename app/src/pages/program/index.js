@@ -42,7 +42,10 @@ const Program = props => {
         you aint do da wizard
       </div>
     )
-  } else if (contains('walk', props.goal.activities)) {
+  } else if (
+    contains('walk', props.goal.activities) &&
+    props.goal.activities.length < 2
+  ) {
     return (
       <div>
         <MenuBar active="program" history={props.history} />
@@ -73,6 +76,79 @@ const Program = props => {
         </Grid>
       </div>
     )
+  } else if (
+    contains('walk', props.goal.activities) &&
+    contains('run', props.goal.activities)
+  ) {
+    return (
+      <div>
+        <MenuBar active="program" history={props.history} />
+        <Segment>
+          <Container textAlign="center">
+            <Header as="h2" icon>
+              <Icon name="settings" />
+              Program Settings
+            </Header>
+          </Container>
+          <Container textAlign="center">
+            <Dropdown
+              placeholder="Modify Program"
+              multiple
+              selection
+              options={props.options}
+              value={props.goal.activities}
+              onChange={(e, { value }) => props.onChange('activities', value)}
+            />
+          </Container>{' '}
+        </Segment>
+        <Grid>
+          <Grid.Row>
+            <Grid.Column>
+              <Walk data={filter(t => contains('walk', t.tags), props.tasks)} />
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column>
+              <Run data={filter(t => contains('run', t.tags), props.tasks)} />
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </div>
+    )
+  } else if (
+    contains('run', props.goal.activities) &&
+    props.goal.activities.length < 2
+  ) {
+    return (
+      <div>
+        <MenuBar active="program" history={props.history} />
+        <Segment>
+          <Container textAlign="center">
+            <Header as="h2" icon>
+              <Icon name="settings" />
+              Program Settings
+            </Header>
+          </Container>
+          <Container textAlign="center">
+            <Dropdown
+              placeholder="Modify Program"
+              multiple
+              selection
+              options={props.options}
+              value={props.goal.activities}
+              onChange={(e, { value }) => props.onChange('activities', value)}
+            />
+          </Container>{' '}
+        </Segment>
+        <Grid>
+          <Grid.Row>
+            <Grid.Column>
+              <Run data={filter(t => contains('run', t.tags), props.tasks)} />
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </div>
+    )
   } else {
     return (
       <div>
@@ -98,13 +174,16 @@ const Program = props => {
 
         <Grid>
           <Grid.Row>
-            <Grid.Column width={11}>
+            <Grid.Column>
               <Gym data={filter(t => contains('gym', t.tags), props.tasks)} />
-            </Grid.Column>
-            <Grid.Column width={4}>
+            </Grid.Column>{' '}
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column>
               <Run data={filter(t => contains('run', t.tags), props.tasks)} />
             </Grid.Column>
           </Grid.Row>
+
           <Grid.Row>
             <Grid.Column>
               <Walk data={filter(t => contains('walk', t.tags), props.tasks)} />

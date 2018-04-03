@@ -14,9 +14,7 @@ const Walk = props => {
       <List divided relaxed>
         <List.Item>
           <List.Content>
-            <List.Header as="a" href={t.url} target="_blank">
-              {t.name}
-            </List.Header>
+            <List.Header>{t.name}</List.Header>
             <List.Description>{t.setRep}</List.Description>
           </List.Content>
         </List.Item>
