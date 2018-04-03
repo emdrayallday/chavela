@@ -154,7 +154,7 @@ db
       frequency: '3x',
       type: 'task',
       completed: false,
-      name: 'Pendalay Row',
+      name: 'Barbell Row',
       setRep: '5 x 5',
       url: 'https://www.youtube.com/watch?v=KYaP3yCyHRY&t=522s',
       tags: ['gym', 'weight loss', 'strength', 'weights', 'row']
@@ -186,7 +186,7 @@ db
       completed: false,
       url: 'https://www.youtube.com/watch?v=C9nw2JY30JI',
       setRep: '6-12 Rounds of 30 - 60 Meter Pushes',
-      tags: ['weight loss', 'cardio', 'gym', 'endurance']
+      tags: ['weight loss', 'cardio', 'endurance']
     },
     {
       _id: 'task_run',
@@ -198,19 +198,19 @@ db
       tags: ['weight loss', 'run', 'cardio', 'endurance']
     },
     {
-      _id: 'task_run-two',
+      _id: 'task_run-long',
       type: 'task',
       frequency: 'daily',
-      name: 'Run 2 miles',
+      name: 'Run Long',
       completed: false,
       setRep: '2 miles',
       tags: ['weight loss', 'run', 'cardio', 'endurance']
     },
     {
-      _id: 'task_run-three',
+      _id: 'task_run-longer',
       type: 'task',
       frequency: 'daily',
-      name: 'Run 3 miles',
+      name: 'Run Longer',
       completed: false,
       setRep: '3 miles',
       tags: ['weight loss', 'run', 'cardio', 'endurance']
@@ -219,9 +219,9 @@ db
       _id: 'task_run-unlimited',
       type: 'task',
       frequency: 'daily',
-      name: 'Run as long as possible',
+      name: 'Run Longerer',
       completed: false,
-      setRep: 'unlimited',
+      setRep: 'Until you drop',
       tags: ['weight loss', 'run', 'cardio', 'endurance']
     },
     {
@@ -241,15 +241,97 @@ db
         'Rollerblading',
         'Martial Arts'
       ],
-      tags: [
-        'weight loss',
-        'run',
-        'cardio',
-        'endurance',
-        'hobbies',
-        'active',
-        'sports'
-      ]
+      tags: ['weight loss', 'hobbies', 'sports']
+    },
+    {
+      _id: 'task_martial-arts',
+      type: 'task',
+      frequency: 'daily',
+      name: 'Martial Arts',
+      completed: false,
+      setRep: 'Learn to defend yourself while getting in shape',
+      tags: ['weight loss', 'run', 'cardio', 'active', 'endurance']
+    },
+    {
+      _id: 'task_rollerblading',
+      type: 'task',
+      frequency: 'daily',
+      name: 'Rollerblading',
+      completed: false,
+      setRep: 'Just plain fun',
+      tags: ['weight loss', 'run', 'cardio', 'active', 'endurance']
+    },
+    {
+      _id: 'task_hiking',
+      type: 'task',
+      frequency: 'daily',
+      name: 'Hiking',
+      completed: false,
+      setRep: 'Get in touch wiht nature',
+      tags: ['weight loss', 'run', 'cardio', 'active', 'endurance']
+    },
+    {
+      _id: 'task_yoga',
+      type: 'task',
+      frequency: 'daily',
+      name: 'Yoga',
+      completed: false,
+      setRep: 'Surprisingly hard',
+      tags: ['weight loss', 'run', 'cardio', 'active', 'endurance']
+    },
+    {
+      _id: 'task_dancing',
+      type: 'task',
+      frequency: 'daily',
+      name: 'Dancing',
+      completed: false,
+      setRep: 'Everyone loves a good dancer',
+      tags: ['weight loss', 'run', 'cardio', 'active', 'endurance']
+    },
+    {
+      _id: 'task_riding-a-bike',
+      type: 'task',
+      frequency: 'daily',
+      name: 'Riding a bike',
+      completed: false,
+      setRep: 'Only if you ride in the middle of the road and block traffic',
+      tags: ['weight loss', 'run', 'cardio', 'active', 'endurance']
+    },
+    {
+      _id: 'task_ultimate-frisbee',
+      type: 'task',
+      frequency: 'daily',
+      name: 'Ultimate Frisbee',
+      completed: false,
+      setRep: 'If you like running and throwing things',
+      tags: ['weight loss', 'run', 'cardio', 'active', 'endurance']
+    },
+    {
+      _id: 'task_swimming',
+      type: 'task',
+      frequency: 'daily',
+      name: 'Swimming',
+      completed: false,
+      setRep: 'Only if you can',
+      tags: ['weight loss', 'run', 'cardio', 'active', 'endurance']
+    },
+    {
+      _id: 'task_basketball',
+      type: 'task',
+      frequency: 'daily',
+      name: 'Basketball',
+      completed: false,
+      setRep: 'Only if you are at least 6',
+      tags: ['weight loss', 'hobbies', 'active', 'sports']
+    },
+    {
+      _id: 'task_skateboarding',
+      type: 'task',
+      frequency: 'daily',
+      name: 'Skateboarding',
+      completed: false,
+      setRep: 'Like uber fun',
+      tags: ['weight loss', 'run', 'cardio', 'active', 'endurance']
     },
     {
       _id: 'resource_lift-big-eat-big',

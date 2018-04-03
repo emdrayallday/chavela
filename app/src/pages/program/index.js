@@ -16,6 +16,7 @@ import MenuBar from '../../components/menu'
 import Walk from '../../components/walk'
 import Run from '../../components/run'
 import Gym from '../../components/gym'
+import Active from '../../components/active'
 const Program = props => {
   if (isEmpty(props.goal.activities) || isNil(props.goal.activities)) {
     return (
@@ -77,8 +78,43 @@ const Program = props => {
       </div>
     )
   } else if (
+    contains('gym', props.goal.activities) &&
+    props.goal.activities.length < 2
+  ) {
+    return (
+      <div>
+        <MenuBar active="program" history={props.history} />
+        <Segment>
+          <Container textAlign="center">
+            <Header as="h2" icon>
+              <Icon name="settings" />
+              Program Settings
+            </Header>
+          </Container>
+          <Container textAlign="center">
+            <Dropdown
+              placeholder="Modify Program"
+              multiple
+              selection
+              options={props.options}
+              value={props.goal.activities}
+              onChange={(e, { value }) => props.onChange('activities', value)}
+            />
+          </Container>{' '}
+        </Segment>
+        <Grid>
+          <Grid.Row>
+            <Grid.Column>
+              <Gym data={filter(t => contains('gym', t.tags), props.tasks)} />
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </div>
+    )
+  } else if (
     contains('walk', props.goal.activities) &&
-    contains('run', props.goal.activities)
+    contains('run', props.goal.activities) &&
+    props.goal.activities.length < 3
   ) {
     return (
       <div>
@@ -149,7 +185,12 @@ const Program = props => {
         </Grid>
       </div>
     )
-  } else {
+  } else if (
+    contains('walk', props.goal.activities) &&
+    contains('run', props.goal.activities) &&
+    contains('gym', props.goal.activities) &&
+    props.goal.activities.length < 4
+  ) {
     return (
       <div>
         <MenuBar active="program" history={props.history} />
@@ -187,6 +228,42 @@ const Program = props => {
           <Grid.Row>
             <Grid.Column>
               <Walk data={filter(t => contains('walk', t.tags), props.tasks)} />
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </div>
+    )
+  } else if (
+    contains('active', props.goal.activities) &&
+    props.goal.activities.length < 2
+  ) {
+    return (
+      <div>
+        <MenuBar active="program" history={props.history} />
+        <Segment>
+          <Container textAlign="center">
+            <Header as="h2" icon>
+              <Icon name="settings" />
+              Program Settings
+            </Header>
+          </Container>
+          <Container textAlign="center">
+            <Dropdown
+              placeholder="Modify Program"
+              multiple
+              selection
+              options={props.options}
+              value={props.goal.activities}
+              onChange={(e, { value }) => props.onChange('activities', value)}
+            />
+          </Container>{' '}
+        </Segment>
+        <Grid>
+          <Grid.Row>
+            <Grid.Column>
+              <Active
+                data={filter(t => contains('active', t.tags), props.tasks)}
+              />
             </Grid.Column>
           </Grid.Row>
         </Grid>
