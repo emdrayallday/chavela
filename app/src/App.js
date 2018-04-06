@@ -6,6 +6,7 @@ import Resources from './pages/resources'
 import Success from './pages/success'
 import Wizard from './pages/wizard'
 import Program from './pages/program'
+import Personalize from './pages/program/show'
 class App extends Component {
   render() {
     return (
@@ -17,6 +18,7 @@ class App extends Component {
             <Route exact path="/success-stories" component={Success} />
             <Route exact path="/wizard" component={Wizard} />
             <Route exact path="/program" component={Program} />
+            <Route path="/program/:id" component={Personalize} />
           </Switch>
         </div>
       </BrowserRouter>

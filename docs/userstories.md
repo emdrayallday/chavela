@@ -1,5 +1,7 @@
 # User Stories
 
+map over array and push to same array depending on answers from questionnaire
+
 As a _[role]_, I can _[feature]_ so that _[reason]_.
 
 ## Home

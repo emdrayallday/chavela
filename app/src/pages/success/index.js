@@ -1,11 +1,14 @@
 import React from 'react'
 import MenuBar from '../../components/menu'
-import { Segment } from 'semantic-ui-react'
+import { map, append, compose } from 'ramda'
+import { Segment, Header } from 'semantic-ui-react'
 import { Carousel } from 'react-responsive-carousel'
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css'
+
 const Success = props => {
   return (
     <div>
+      <Header as="h1" />
       <MenuBar active="success" history={props.history} />
       <Segment attached inverted>
         <Carousel showThumbs={false} showIndicators={false} autoPlay>
