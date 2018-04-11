@@ -1,7 +1,234 @@
 require('dotenv').config()
 const PouchDB = require('pouchdb-core')
+const { flatten, repeat, map, merge } = require('ramda')
 PouchDB.plugin(require('pouchdb-adapter-http'))
 const db = new PouchDB(`${process.env.COUCH_URL}`)
+
+const dead = {
+  _id: 'task_deadlift',
+  type: 'task',
+  frequency: '3x',
+  name: 'Deadlift',
+  setRep: '5 x 5',
+  completed: false,
+  url: 'https://www.youtube.com/watch?v=6rRfS49JG6c',
+  tags: ['gym', 'weight loss', 'strength', 'weights', 'deadlift']
+}
+const press = {
+  _id: 'task_overhead-press',
+  type: 'task',
+  completed: false,
+  frequency: '3x',
+  name: 'Overhead Press',
+  setRep: '5 x 5',
+  url: 'https://www.youtube.com/watch?v=k4WoLZbonns',
+  tags: ['gym', 'weight loss', 'strength', 'weights', 'overhead', 'press']
+}
+
+const bench = {
+  _id: 'task_bench-press',
+  type: 'task',
+  completed: false,
+  frequency: '3x',
+  name: 'Bench Press',
+  setRep: '5 x 5',
+  url: 'https://www.youtube.com/watch?v=33mjoyc5JbE',
+  tags: ['gym', 'weight loss', 'strength', 'weights', 'bench', 'press']
+}
+const squat = {
+  _id: 'task_squat',
+  type: 'task',
+  completed: false,
+  frequency: '3x',
+  name: 'Squat',
+  setRep: '5 x 5',
+  url: 'https://www.youtube.com/watch?v=LLwiGkywKN4',
+  tags: ['gym', 'weight loss', 'strength', 'weights', 'squat']
+}
+
+const row = {
+  _id: 'task_barbell-row',
+  frequency: '3x',
+  type: 'task',
+  completed: false,
+  name: 'Barbell Row',
+  setRep: '5 x 5',
+  url: 'https://www.youtube.com/watch?v=KYaP3yCyHRY&t=522s',
+  tags: ['gym', 'weight loss', 'strength', 'weights', 'row']
+}
+const a = {
+  _id: 'workout_a',
+  day: 'Monday',
+  type: 'workout',
+  completed: false,
+  name: 'Workout A',
+
+  workout: [squat, bench, row]
+}
+const b = {
+  _id: 'workout_b',
+  day: 'Wednesday',
+  type: 'workout',
+  completed: false,
+  name: 'Workout B',
+
+  workout: [squat, press, dead]
+}
+
+const c = {
+  _id: 'workout_a',
+  day: 'Friday',
+  type: 'workout',
+  completed: false,
+  name: 'Workout A',
+
+  workout: [squat, bench, row]
+}
+
+const d = {
+  _id: 'workout_b',
+  day: 'Monday',
+  type: 'workout',
+  completed: false,
+  name: 'Workout B',
+
+  workout: [squat, press, dead]
+}
+const e = {
+  _id: 'workout_a',
+  day: 'Wednesday',
+  type: 'workout',
+  completed: false,
+  name: 'Workout A',
+
+  workout: [squat, bench, row]
+}
+const f = {
+  _id: 'workout_b',
+  day: 'Friday',
+  type: 'workout',
+  completed: false,
+  name: 'Workout B',
+
+  workout: [squat, press, dead]
+}
+
+const run = {
+  _id: 'task_run',
+  type: 'task',
+  frequency: 'daily',
+  completed: false,
+  name: 'Run',
+  setRep: '1 Mile',
+  tags: ['weight loss', 'run', 'cardio', 'endurance']
+}
+
+const walk = {
+  _id: 'task_walk',
+  type: 'task',
+  frequency: 'daily',
+  name: 'Walk',
+  completed: false,
+  setRep: '30 minutes',
+  tags: ['weight loss', 'walk', 'cardio', 'endurance']
+}
+const walk1 = {
+  _id: 'task_walk-one-hour',
+  type: 'task',
+  frequency: 'daily',
+  name: 'Walk',
+  completed: false,
+  setRep: '60 minutes',
+  tags: ['weight loss', 'walk', 'cardio', 'endurance']
+}
+const sled = {
+  _id: 'task_sled-sprint',
+  type: 'task',
+  frequency: '2x',
+  name: 'Sled Sprint',
+  completed: false,
+  url: 'https://www.youtube.com/watch?v=C9nw2JY30JI',
+  setRep: '6-12 Rounds of 30 - 60 Meter Pushes',
+  tags: ['weight loss', 'cardio', 'endurance']
+}
+
+const run2 = {
+  _id: 'task_run-long',
+  type: 'task',
+  frequency: 'daily',
+  name: 'Run Long',
+  completed: false,
+  setRep: '2 miles',
+  tags: ['weight loss', 'run', 'cardio', 'endurance']
+}
+const run3 = {
+  _id: 'task_run-longer',
+  type: 'task',
+  frequency: 'daily',
+  name: 'Run Longer',
+  completed: false,
+  setRep: '3 miles',
+  tags: ['weight loss', 'run', 'cardio', 'endurance']
+}
+const runU = {
+  _id: 'task_run-unlimited',
+  type: 'task',
+  frequency: 'daily',
+  name: 'Run Longerer',
+  completed: false,
+  setRep: 'Until you drop',
+  tags: ['weight loss', 'run', 'cardio', 'endurance']
+}
+const active = {
+  _id: 'task_active-hobbies',
+  type: 'task',
+  frequency: 'daily',
+  name: 'Active Hobbies',
+  desc: [
+    'Basketball',
+    'Skateboarding',
+    'Swimming',
+    'Ultimate Frisbee',
+    'Riding a Bike',
+    'Dancing',
+    'Yoga',
+    'Hiking',
+    'Rollerblading',
+    'Martial Arts'
+  ],
+  tags: ['weight loss', 'hobbies', 'sports']
+}
+
+const lift = [a, b, c, d, e, f]
+const liftWalk = map(
+  w => merge(w, { workout: [walk, squat, press, dead] }),
+  lift
+)
+const liftWalk1 = map(
+  w => merge(w, { workout: [walk1, squat, press, dead, walk1] }),
+  lift
+)
+const liftRun = map(w => merge(w, { workout: [run, squat, press, dead] }), lift)
+const liftRun2 = map(
+  w => merge(w, { workout: [run2, squat, press, dead] }),
+  lift
+)
+const liftRun3 = map(
+  w => merge(w, { workout: [run, squat, press, dead, run3] }),
+  lift
+)
+const liftRunU = map(
+  w => merge(w, { workout: [run, squat, press, dead, runU] }),
+  lift
+)
+const threeMonthPlan = [
+  liftWalk,
+  liftWalk1,
+  liftRun,
+  liftRun2,
+  liftRun3,
+  liftRunU
+]
 
 db
   .bulkDocs([
@@ -421,6 +648,12 @@ db
       url: 'https://www.bodybuilding.com/',
       img:
         'https://yt3.ggpht.com/a-/AJLlDp2Hy_E964JfeFXdm9ttB5zuaSZohLCodwtReQ=s900-mo-c-c0xffffffff-rj-k-no'
+    },
+    {
+      _id: 'program_3-month-lifting-program',
+      name: '3 Month Lifting Program',
+      type: 'program',
+      program: threeMonthPlan
     }
   ])
   .then(result => console.log('Documents successfully uploaded!', result))

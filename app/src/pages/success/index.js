@@ -8,9 +8,16 @@ import styles from 'react-responsive-carousel/lib/styles/carousel.min.css'
 const Success = props => {
   return (
     <div>
-      <Header as="h1" />
       <MenuBar active="success" history={props.history} />
-      <Segment attached inverted>
+      <Segment
+        textAlign="center"
+        attached
+        basic
+        style={{ backgroundColor: 'Gainsboro' }}
+      >
+        <Header content="Upload your before and after picture" />
+      </Segment>
+      <Segment inverted basic attached>
         <Carousel showThumbs={false} showIndicators={false} autoPlay>
           <div>
             <img src="spongebob-before.jpg" height="350px" />
@@ -29,6 +36,22 @@ const Success = props => {
             <p className="legend">AFTER CHAVELA!</p>
           </div>
         </Carousel>
+      </Segment>
+      <Segment
+        textAlign="center"
+        attached
+        basic
+        style={{ backgroundColor: 'Gainsboro' }}
+        padded="very"
+      >
+        <Header
+          content="Coming Soon..."
+          color="pink"
+          style={{
+            fontSize: '5em',
+            textShadow: '1px 1px black'
+          }}
+        />
       </Segment>
     </div>
   )

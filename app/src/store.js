@@ -1,6 +1,6 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { advisorWizard, stepNumber, form } from './reducers/wizard'
-import { tasks } from './reducers/tasks'
+import { tasks, programs } from './reducers/tasks'
 import { resources } from './reducers/resources'
 import thunk from 'redux-thunk'
 
@@ -10,6 +10,7 @@ const store = createStore(
     stepNumber,
     form,
     tasks,
+    programs,
     resources
   }),
 

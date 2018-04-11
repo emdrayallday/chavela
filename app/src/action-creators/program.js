@@ -1,5 +1,5 @@
 import fetch from 'isomorphic-fetch'
-import { SET_TASKS } from '../constants'
+import { SET_TASKS, SET_PLAN } from '../constants'
 const url = 'http://localhost:5000'
 const slug = require('slugify')
 const uuidv4 = require('uuid/v4')
@@ -8,6 +8,10 @@ export const getTasks = async (dispatch, getState) => {
   dispatch({ type: SET_TASKS, payload: tasks })
 }
 
+export const getPrograms = async (dispatch, getState) => {
+  const plan = await fetch(`${url}/programs`).then(res => res.json())
+  dispatch({ type: SET_PLAN, payload: plan })
+}
 export const addGoal = (history, goal) => async (dispatch, getState) => {
   goal.type = 'user'
   goal._id = `${goal.type}_${slug(goal.userName, {
