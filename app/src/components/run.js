@@ -1,13 +1,6 @@
 import React from 'react'
-import { map, filter } from 'ramda'
-import {
-  List,
-  Checkbox,
-  Segment,
-  Grid,
-  Header,
-  Container
-} from 'semantic-ui-react'
+import { map } from 'ramda'
+import { List, Segment, Grid, Header, Container } from 'semantic-ui-react'
 const Run = props => {
   const running = map(t => {
     return (
@@ -25,7 +18,7 @@ const Run = props => {
   return (
     <div>
       <Segment
-        style={props.style ? { backgroundColor: 'Gainsboro' } : null}
+        style={props.style.style ? { backgroundColor: 'Gainsboro' } : null}
         basic
       >
         {' '}

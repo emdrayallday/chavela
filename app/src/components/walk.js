@@ -1,13 +1,6 @@
 import React from 'react'
-import { map, filter } from 'ramda'
-import {
-  List,
-  Checkbox,
-  Segment,
-  Header,
-  Grid,
-  Container
-} from 'semantic-ui-react'
+import { map } from 'ramda'
+import { List, Segment, Header, Grid, Container } from 'semantic-ui-react'
 const Walk = props => {
   const walking = map(t => {
     return (
@@ -24,7 +17,7 @@ const Walk = props => {
   return (
     <div>
       <Segment
-        style={props.style ? { backgroundColor: 'Gainsboro' } : null}
+        style={props.style.style ? { backgroundColor: 'Gainsboro' } : null}
         basic
       >
         <Grid textAlign="center" verticalAlign="middle">

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { Menu, Container, Segment } from 'semantic-ui-react'
 
 const MenuBar = props => {

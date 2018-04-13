@@ -1,5 +1,5 @@
 import { SET_TASKS, SET_PLAN, SET_PROGRAM, EDIT_PROGRAM } from '../constants'
-import { append, merge } from 'ramda'
+import { merge } from 'ramda'
 export const tasks = (state = [], action) => {
   switch (action.type) {
     case SET_TASKS:

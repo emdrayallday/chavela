@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Segment } from 'semantic-ui-react'
+import { Container } from 'semantic-ui-react'
 import QuestionCard from '../../components/question'
 import { connect } from 'react-redux'
 import { addGoal } from '../../action-creators/program'

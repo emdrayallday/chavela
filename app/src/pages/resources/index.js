@@ -1,16 +1,8 @@
 import React from 'react'
 import MenuBar from '../../components/menu'
 import { connect } from 'react-redux'
-import {
-  Card,
-  Button,
-  Image,
-  Reveal,
-  Container,
-  Header,
-  Segment
-} from 'semantic-ui-react'
-import { map, slice } from 'ramda'
+import { Card, Button, Image, Segment } from 'semantic-ui-react'
+import { map } from 'ramda'
 const Resources = props => {
   return (
     <div>

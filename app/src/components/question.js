@@ -1,14 +1,5 @@
 import React from 'react'
-import {
-  Card,
-  Input,
-  Image,
-  Icon,
-  Button,
-  Dropdown,
-  Segment
-} from 'semantic-ui-react'
-import { map } from 'ramda'
+import { Card, Input, Image, Button, Dropdown } from 'semantic-ui-react'
 
 const QuestionCard = props => {
   const { statement, question, img, desc, buttons, step } = props.data

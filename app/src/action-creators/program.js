@@ -10,7 +10,6 @@ export const getTasks = async (dispatch, getState) => {
 }
 
 export const getPrograms = async (dispatch, getState) => {
-  console.log('GET PROGRAMS GETSTATE', dispatch)
   const plan = await fetch(`${url}/programs`).then(res => res.json())
   dispatch({ type: SET_PLAN, payload: plan })
 }

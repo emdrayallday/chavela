@@ -1,6 +1,6 @@
 import React from 'react'
-import { compose, flatten, repeat, map } from 'ramda'
-import { Card, Button, Image, Segment, List, Checkbox } from 'semantic-ui-react'
+import { compose, map } from 'ramda'
+import { Card, Button, Segment, List } from 'semantic-ui-react'
 
 const Lifting = props => {
   return (

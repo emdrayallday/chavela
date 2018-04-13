@@ -1,6 +1,6 @@
 import React from 'react'
 import { map, filter } from 'ramda'
-import { List, Checkbox, Segment, Grid, Header } from 'semantic-ui-react'
+import { List, Segment, Grid, Header } from 'semantic-ui-react'
 const Gym = props => {
   const workoutA = map(t => {
     return (
@@ -35,7 +35,7 @@ const Gym = props => {
     <div>
       <Segment
         textAlign="center"
-        style={props.style ? { backgroundColor: 'Gainsboro' } : null}
+        style={props.style.style ? { backgroundColor: 'Gainsboro' } : null}
         basic
       >
         <Header as="h5">Alternate workouts A and B three times a week</Header>

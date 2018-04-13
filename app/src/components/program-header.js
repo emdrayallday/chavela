@@ -2,7 +2,6 @@ import React from 'react'
 import MenuBar from './menu'
 import { Segment, Container, Dropdown, Header, Icon } from 'semantic-ui-react'
 const ModifyBar = props => {
-  console.log('PROPs in modify', props)
   return (
     <div>
       <MenuBar active="program" history={props.history} />

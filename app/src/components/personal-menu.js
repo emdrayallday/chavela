@@ -1,9 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Menu, Container, Segment, Icon, Header } from 'semantic-ui-react'
+import { Menu, Container, Segment, Icon } from 'semantic-ui-react'
 
 const PersonalMenu = props => {
-  let isActive = props.active
   return (
     <Segment inverted textAlign="center" attached>
       <Container>
