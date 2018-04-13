@@ -11,7 +11,7 @@ const Resources = props => {
         <Card.Group>
           {map(
             r => (
-              <Card fluid color="violet">
+              <Card key={r._id} fluid color="violet">
                 <Card.Content>
                   <Image floated="right" size="mini" src={r.img} />
                   <Card.Header>{r.name}</Card.Header>

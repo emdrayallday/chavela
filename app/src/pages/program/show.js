@@ -11,7 +11,7 @@ const Personalize = props => {
 
   return (
     <div>
-      <PersonalMenu history={props.history} name="Mark" />
+      <PersonalMenu history={props.history} name={`${props.goal.userName}'s`} />
       <Lifting plan={program} toggle={() => props.toggle(program)} />
     </div>
   )
@@ -19,7 +19,8 @@ const Personalize = props => {
 
 function mapStateToProps(state) {
   return {
-    program: state.program
+    program: state.program,
+    goal: state.form
   }
 }
 function mapActionToProps(dispatch) {

@@ -4,7 +4,7 @@ import { List, Segment, Header, Grid, Container } from 'semantic-ui-react'
 const Walk = props => {
   const walking = map(t => {
     return (
-      <List divided relaxed>
+      <List key={t._id} divided relaxed>
         <List.Item>
           <List.Content>
             <List.Header>{t.name}</List.Header>

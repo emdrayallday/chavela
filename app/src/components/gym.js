@@ -4,7 +4,7 @@ import { List, Segment, Grid, Header } from 'semantic-ui-react'
 const Gym = props => {
   const workoutA = map(t => {
     return (
-      <List>
+      <List key={t._id}>
         <List.Item>
           <List.Content>
             <List.Header as="a" href={t.url} target="_blank">
@@ -19,7 +19,7 @@ const Gym = props => {
 
   const workoutB = map(t => {
     return (
-      <List divided relaxed>
+      <List key={t._id} divided relaxed>
         <List.Item>
           <List.Content>
             <List.Header as="a" href={t.url} target="_blank">

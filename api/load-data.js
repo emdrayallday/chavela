@@ -527,7 +527,7 @@ db
       frequency: 'daily',
       name: 'Hiking',
       completed: false,
-      setRep: 'Get in touch wiht nature',
+      setRep: 'Get in touch with nature',
       tags: ['weight loss', 'cardio', 'active', 'endurance']
     },
     {

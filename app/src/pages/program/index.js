@@ -17,6 +17,7 @@ const Program = props => {
           options={props.options}
           goal={props.goal}
           onChange={props.onChange}
+          program={props.program}
         />
         <Segment style={{ backgroundColor: 'Gainsboro' }} basic>
           <Container text>
@@ -41,6 +42,7 @@ const Program = props => {
           options={props.options}
           goal={props.goal}
           onChange={props.onChange}
+          program={props.program}
         />
 
         <Grid>
@@ -67,6 +69,7 @@ const Program = props => {
           options={props.options}
           goal={props.goal}
           onChange={props.onChange}
+          program={props.program}
         />
 
         <Grid>
@@ -101,6 +104,7 @@ const Program = props => {
           options={props.options}
           goal={props.goal}
           onChange={props.onChange}
+          program={props.program}
         />
 
         <Grid>
@@ -127,6 +131,7 @@ const Program = props => {
           options={props.options}
           goal={props.goal}
           onChange={props.onChange}
+          program={props.program}
         />
 
         <Grid>
@@ -162,6 +167,7 @@ const Program = props => {
           options={props.options}
           goal={props.goal}
           onChange={props.onChange}
+          program={props.program}
         />
 
         <Grid>
@@ -203,6 +209,7 @@ const Program = props => {
           options={props.options}
           goal={props.goal}
           onChange={props.onChange}
+          program={props.program}
         />
 
         <Grid>
@@ -229,6 +236,7 @@ const Program = props => {
           options={props.options}
           goal={props.goal}
           onChange={props.onChange}
+          program={props.program}
         />
 
         <Grid>
@@ -265,6 +273,7 @@ const Program = props => {
           options={props.options}
           goal={props.goal}
           onChange={props.onChange}
+          program={props.program}
         />
 
         <Grid>
@@ -310,6 +319,7 @@ const Program = props => {
           options={props.options}
           goal={props.goal}
           onChange={props.onChange}
+          program={props.program}
         />
 
         <Grid>
@@ -359,6 +369,7 @@ const Program = props => {
           options={props.options}
           goal={props.goal}
           onChange={props.onChange}
+          program={props.program}
         />
 
         <Grid>
@@ -385,6 +396,7 @@ const Program = props => {
           options={props.options}
           goal={props.goal}
           onChange={props.onChange}
+          program={props.program}
         />
 
         <Grid>
@@ -419,6 +431,7 @@ const Program = props => {
           options={props.options}
           goal={props.goal}
           onChange={props.onChange}
+          program={props.program}
         />
 
         <Grid>
@@ -454,6 +467,7 @@ const Program = props => {
           options={props.options}
           goal={props.goal}
           onChange={props.onChange}
+          program={props.program}
         />
 
         <Grid>
@@ -497,6 +511,7 @@ const Program = props => {
           options={props.options}
           goal={props.goal}
           onChange={props.onChange}
+          program={props.program}
         />
 
         <Grid>
@@ -540,6 +555,7 @@ const Program = props => {
           options={props.options}
           goal={props.goal}
           onChange={props.onChange}
+          program={props.program}
         />
 
         <Grid>
@@ -568,7 +584,8 @@ function mapStateToProps(state) {
   return {
     tasks: state.tasks,
     goal: state.form,
-    options: state.advisorWizard.three.buttons.options
+    options: state.advisorWizard.three.buttons.options,
+    program: state.program
   }
 }
 function mapActionToProps(dispatch) {

@@ -18,7 +18,7 @@ export const programs = (state = [], action) => {
   }
 }
 
-export const program = (state = [], action) => {
+export const program = (state = {}, action) => {
   switch (action.type) {
     case SET_PROGRAM:
       return action.payload

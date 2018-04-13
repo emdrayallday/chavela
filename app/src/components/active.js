@@ -4,7 +4,7 @@ import { List, Segment, Grid, Header, Container } from 'semantic-ui-react'
 const Active = props => {
   const hobbies = map(t => {
     return (
-      <List divided relaxed>
+      <List key={t._id} divided relaxed>
         <List.Item>
           <List.Content>
             <List.Header>{t.name}</List.Header>
