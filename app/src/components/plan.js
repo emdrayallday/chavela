@@ -3,7 +3,6 @@ import { compose, flatten, repeat, map } from 'ramda'
 import { Card, Button, Image, Segment, List, Checkbox } from 'semantic-ui-react'
 
 const Lifting = props => {
-  console.log('props', props)
   return (
     <div>
       <Segment attached style={{ backgroundColor: 'Gainsboro' }}>
@@ -14,12 +13,6 @@ const Lifting = props => {
               return (
                 <Card centered fluid color="violet">
                   <Card.Content>
-                    <Checkbox
-                      style={{ float: 'right' }}
-                      label="Completed"
-                      checked={w.completed}
-                      onClick={() => props.toggle}
-                    />
                     <Card.Header>{w.day}</Card.Header>
                     <Card.Meta>{w.name}</Card.Meta>
                     <Card.Description>
@@ -42,8 +35,8 @@ const Lifting = props => {
                   </Card.Content>
                   <Card.Content extra>
                     <div className="ui two buttons">
-                      <Button basic color="teal" target="_blank">
-                        Website
+                      <Button basic color="teal" onClick={props.toggle}>
+                        Completed
                       </Button>
                     </div>
                   </Card.Content>

@@ -28,8 +28,16 @@ const Program = props => {
           goal={props.goal}
           onChange={props.onChange}
         />
-
-        <p> you aint do da wizard</p>
+        <Segment style={{ backgroundColor: 'Gainsboro' }} basic>
+          <Container text>
+            <p>
+              {' '}
+              If you would like a guideline instead of following ours, select a
+              combination of what you want to do from the dropdown menu which
+              will have beginner advice on how to get started.
+            </p>
+          </Container>
+        </Segment>
       </div>
     )
   } else if (
@@ -566,7 +574,6 @@ const Program = props => {
     )
   }
 }
-
 function mapStateToProps(state) {
   return {
     tasks: state.tasks,

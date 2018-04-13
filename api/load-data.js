@@ -205,7 +205,7 @@ const liftWalk = map(
   lift
 )
 const liftWalk1 = map(
-  w => merge(w, { workout: [walk1, squat, press, dead, walk1] }),
+  w => merge(w, { workout: [walk1, squat, press, dead] }),
   lift
 )
 const liftRun = map(w => merge(w, { workout: [run, squat, press, dead] }), lift)
@@ -229,7 +229,40 @@ const threeMonthPlan = [
   liftRun3,
   liftRunU
 ]
-
+const sixMonthPlan = [
+  liftWalk,
+  liftWalk,
+  liftWalk1,
+  liftWalk1,
+  liftRun,
+  liftRun,
+  liftRun2,
+  liftRun2,
+  liftRun3,
+  liftRun3,
+  liftRunU,
+  liftRunU
+]
+const twelveMonthPlan = [
+  liftWalk,
+  liftWalk,
+  liftWalk,
+  liftWalk1,
+  liftWalk1,
+  liftWalk1,
+  liftRun,
+  liftRun,
+  liftRun,
+  liftRun2,
+  liftRun2,
+  liftRun2,
+  liftRun3,
+  liftRun3,
+  liftRun3,
+  liftRunU,
+  liftRunU,
+  liftRunU
+]
 db
   .bulkDocs([
     {
@@ -650,10 +683,25 @@ db
         'https://yt3.ggpht.com/a-/AJLlDp2Hy_E964JfeFXdm9ttB5zuaSZohLCodwtReQ=s900-mo-c-c0xffffffff-rj-k-no'
     },
     {
-      _id: 'program_3-month-lifting-program',
-      name: '3 Month Lifting Program',
+      _id: 'program_3-month-program',
+      time: 3,
+      name: '3 Month Program',
       type: 'program',
       program: threeMonthPlan
+    },
+    {
+      _id: 'program_6-month-program',
+      time: 6,
+      name: '6 Month Program',
+      type: 'program',
+      program: sixMonthPlan
+    },
+    {
+      _id: 'program_12-month-program',
+      time: 12,
+      name: '12 Month Program',
+      type: 'program',
+      program: twelveMonthPlan
     }
   ])
   .then(result => console.log('Documents successfully uploaded!', result))

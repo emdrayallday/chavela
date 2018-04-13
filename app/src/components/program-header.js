@@ -10,12 +10,12 @@ const ModifyBar = props => {
         <Container textAlign="center">
           <Header as="h2" icon>
             <Icon name="settings" />
-            Program Settings
+            Program Guide
           </Header>
         </Container>
         <Container textAlign="center">
           <Dropdown
-            placeholder="Modify Program"
+            placeholder="Select one or more"
             multiple
             selection
             options={props.options}

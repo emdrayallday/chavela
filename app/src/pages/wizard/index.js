@@ -5,7 +5,6 @@ import { connect } from 'react-redux'
 import { addGoal } from '../../action-creators/program'
 import { NEXT_STEP, PREV_STEP, CURRENT_NAME } from '../../constants'
 const Wizard = props => {
-  console.log('WHICH STEP', props.stepNumber)
   const currentStep = props.steps.currentStep[props.stepNumber]
 
   if (currentStep === 'started') {
@@ -93,7 +92,10 @@ function mapActionToProps(dispatch) {
     },
     onChange: (field, value) =>
       dispatch({ type: CURRENT_NAME, payload: { [field]: value } }),
-    onSubmit: (history, goal) => addGoal(history, goal)
+    onSubmit: (history, goal) => e => {
+      e.preventDefault()
+      dispatch(addGoal(history, goal))
+    }
   }
 }
 

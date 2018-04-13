@@ -12,6 +12,8 @@ module.exports = app => {
       include_docs: true,
       startkey: 'program_',
       endkey: 'program_\ufff0'
-    }).then(p => res.send(p))
+    })
+      .then(p => res.send(p))
+      .catch(err => console.log(err))
   })
 }

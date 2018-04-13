@@ -9,12 +9,7 @@ const Success = props => {
   return (
     <div>
       <MenuBar active="success" history={props.history} />
-      <Segment
-        textAlign="center"
-        attached
-        basic
-        style={{ backgroundColor: 'Gainsboro' }}
-      >
+      <Segment textAlign="center" attached basic>
         <Header content="Upload your before and after picture" />
       </Segment>
       <Segment inverted basic attached>
